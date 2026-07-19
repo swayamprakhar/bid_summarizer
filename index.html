@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bid Summarizer</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Bid Summarizer</h1>
+            <p>Upload tender documents, get instant summaries, and ask questions in real-time</p>
+            <div class="feature-badges">
+                <span class="badge">📄 Multi-format Support</span>
+                <span class="badge">🌐 Multi-language</span>
+                <span class="badge">🔗 Link Extraction</span>
+                <span class="badge">🤖 AI-Powered</span>
+                <span class="badge">📊 250+ Pages</span>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="upload-section">
+                <h2>Upload Document</h2>
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📁</div>
+                    <h3>Drop your document here</h3>
+                    <p>or click to browse</p>
+                    <p><small>Supports: PDF, DOC, DOCX, TXT</small></p>
+                    <input type="file" id="fileInput" class="file-input" accept=".pdf,.doc,.docx,.txt" />
+                </div>
+
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+
+                <div class="file-info" id="fileInfo"></div>
+                <button class="btn" id="processBtn" disabled>🚀 Process Document</button>
+                <div class="error-message" id="errorMessage"></div>
+                <div class="success-message" id="successMessage"></div>
+            </div>
+
+            <div class="summary-section">
+                <h2>Document Summary</h2>
+                <div class="summary-content" id="summaryContent">
+                    <p style="text-align: center; color: #666; padding: 40px;">
+                        Upload a document to see its summary here...
+                    </p>
+                </div>
+
+                <div class="links-section" id="linksSection">
+                    <h3>🔗 Extracted Links</h3>
+                    <ul class="links-list" id="linksList"></ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="query-section">
+            <h2>💬 Ask Questions</h2>
+            <div class="query-input-area">
+                <input type="text" class="query-input" id="queryInput" placeholder="Ask any question..." disabled />
+                <button class="btn" id="queryBtn" disabled>🔍 Ask</button>
+            </div>
+
+            <div class="query-response" id="queryResponse">
+                <h4>AI Response:</h4>
+                <div id="responseContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
